@@ -9,3 +9,7 @@ venv/
 .vscode/
 .DS_Store
 Thumbs.db
+
+# временные файлы отладки
+traces.json
+trace_detail.json
