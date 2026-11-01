@@ -1,0 +1,11 @@
+# Базовые исключения для репозитория лабораторной работы 3
+__pycache__/
+*.pyc
+*.pyo
+venv/
+.venv/
+*.log
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db

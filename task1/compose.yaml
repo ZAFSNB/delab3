@@ -1,0 +1,35 @@
+# Docker Compose: Flask-приложение с трассировкой OpenTelemetry + Jaeger.
+#
+# Поток телеметрии:
+#   app (SDK + OTLP exporter) --gRPC :4317--> jaeger (collector)
+#   браузер --HTTP :16686--> веб-интерфейс Jaeger
+
+services:
+  # ---------- Средство трассировки Jaeger ----------
+  # all-in-one: коллектор + хранилище (в памяти) + веб-интерфейс в одном контейнере
+  jaeger:
+    image: jaegertracing/all-in-one:1.62.0
+    container_name: lab3-jaeger
+    environment:
+      COLLECTOR_OTLP_ENABLED: "true"   # приём телеметрии по протоколу OTLP
+    ports:
+      - "16686:16686"                  # веб-интерфейс Jaeger UI
+      - "4317:4317"                    # OTLP gRPC
+      - "4318:4318"                    # OTLP HTTP (резервный вариант)
+
+  # ---------- Flask-приложение ----------
+  app:
+    build: .                           # сборка образа из Dockerfile в текущем каталоге
+    image: lab3-task1-app
+    container_name: lab3-app
+    environment:
+      OTEL_SERVICE_NAME: lab3-flask-app
+      OTEL_EXPORTER_OTLP_ENDPOINT: http://jaeger:4317   # имя сервиса = DNS-имя в сети compose
+      SEND_URL: http://127.0.0.1:5000/send
+      DEPLOYMENT_ENV: lab
+      # Проверка живости (HEALTHCHECK) не должна засорять трассировку
+      OTEL_PYTHON_FLASK_EXCLUDED_URLS: health
+    ports:
+      - "5000:5000"                    # приложение доступно на хосте
+    depends_on:
+      - jaeger                         # сначала запускается Jaeger
