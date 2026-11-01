@@ -240,14 +240,15 @@ GET /                     3.53 ms   (серверный спан, автомат
 
 - `images/01-structure.png` — структура каталога `task1`;
 - `images/02-app-code.png` — настройка OpenTelemetry в `app.py`;
-- `images/03-compose-file.png` — `compose.yaml`;
-- `images/04-compose-up.png` — сборка и запуск `docker compose up -d --build`;
-- `images/05-compose-ps.png` — состояние контейнеров;
-- `images/06-curl.png` — ответы приложения;
-- `images/07-jaeger-services.png` — сервис `lab3-flask-app` в Jaeger;
-- `images/08-jaeger-traces.png` — список трассировок;
-- `images/09-jaeger-trace-detail.png` — дерево из пяти спанов;
-- `images/10-span-attributes.png` — атрибуты спана `hello`.
+- `images/03-dockerfile.png` — `Dockerfile`;
+- `images/04-compose-file.png` — `compose.yaml`;
+- `images/05-compose-up.png` — сборка и запуск `docker compose up -d --build`;
+- `images/06-compose-ps.png` — состояние контейнеров;
+- `images/07-curl.png` — ответы приложения;
+- `images/08-jaeger-services.png` — сервис `lab3-flask-app` в Jaeger;
+- `images/09-jaeger-traces.png` — список трассировок;
+- `images/10-jaeger-trace-detail.png` — дерево из пяти спанов;
+- `images/11-span-attributes.png` — атрибуты и события спана `hello`.
 
 ## 6. Ответы на контрольные вопросы
 
