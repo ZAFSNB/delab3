@@ -239,16 +239,38 @@ GET /                     3.53 ms   (серверный спан, автомат
 Скриншоты:
 
 - `images/01-structure.png` — структура каталога `task1`;
+
+![структура каталога task1](images/01-structure.png)
 - `images/02-app-code.png` — настройка OpenTelemetry в `app.py`;
+
+![настройка OpenTelemetry в app.py](images/02-app-code.png)
 - `images/03-dockerfile.png` — `Dockerfile`;
+
+![Dockerfile](images/03-dockerfile.png)
 - `images/04-compose-file.png` — `compose.yaml`;
+
+![compose.yaml](images/04-compose-file.png)
 - `images/05-compose-up.png` — сборка и запуск `docker compose up -d --build`;
+
+![сборка и запуск docker compose up -d --build](images/05-compose-up.png)
 - `images/06-compose-ps.png` — состояние контейнеров;
+
+![состояние контейнеров](images/06-compose-ps.png)
 - `images/07-curl.png` — ответы приложения;
+
+![ответы приложения](images/07-curl.png)
 - `images/08-jaeger-services.png` — сервис `lab3-flask-app` в Jaeger;
+
+![сервис lab3-flask-app в Jaeger](images/08-jaeger-services.png)
 - `images/09-jaeger-traces.png` — список трассировок;
+
+![список трассировок](images/09-jaeger-traces.png)
 - `images/10-jaeger-trace-detail.png` — дерево из пяти спанов;
+
+![дерево из пяти спанов](images/10-jaeger-trace-detail.png)
 - `images/11-span-attributes.png` — атрибуты и события спана `hello`.
+
+![атрибуты и события спана hello.](images/11-span-attributes.png)
 
 ## 6. Ответы на контрольные вопросы
 
