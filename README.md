@@ -2,12 +2,6 @@
 
 Report on LabRabota3. Мониторинг в распределённых системах (OpenTelemetry + Jaeger).
 
-# Usage
-
-// Заменить <<link>> и <<folder>> на соответствующие ссылки/названия
-
-To check, please, preview report by <<link>> and source files
-in <<folder>>.
 
 - Задание 1 (группа 13) — каталог `task1/`: Flask-приложение с трассировкой
   OpenTelemetry и Jaeger, `Dockerfile`, `compose.yaml`.
