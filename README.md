@@ -21,7 +21,3 @@ curl http://localhost:5000/
 
 Чжао Аофэй, группа 13.
 
-# Additional Notes
-
-// СКОПИРОВАТЬ И ВСТАВИТЬ ССЫЛКУ НА СВОЙ РЕПОЗИТОРИЙ, НАПРИМЕР
-https://github.com/<username>/LabRabota3
